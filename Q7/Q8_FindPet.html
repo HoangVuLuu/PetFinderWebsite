@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Q8_ExternalStyleSheet.css">
+    <title>Q8</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    setInterval(currentTime, 1000);
+
+    function currentTime() {
+        const t = new Date();
+        document.getElementById("time").innerHTML = t.toLocaleString();
+    }
+
+    function checkForm() {
+    var x = document.forms["form"]["PetChoice"].value;
+    var checkboxes = document.querySelectorAll('input[name="getalong[]"]');
+    var isAnyCheckboxChecked = false;
+    var valid = true;
+
+    // Checking if at least one checkbox is checked
+    checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+            isAnyCheckboxChecked = true;
+        }
+    });
+
+    if (x == "" || x == null) {
+        alert("Please select Cat or Dog.");
+        valid = false;
+    }
+
+    if (!isAnyCheckboxChecked) {
+        alert("Please select at least one option for getting along.");
+        valid = false;
+    }
+
+    return valid;
+}
+
+    function resetBreed() {
+        document.getElementById("PetType").style.display = "inline";
+        document.getElementById("age").style.display = "inline";
+    }
+</script>
+
+<div id="header">
+    <table>
+        <tr>
+            <td><h1>Pet Care Center</h1></td>
+            <td>
+                <a href="Q8_Homepage.html">
+                    <!-- This image has been taken from: https://www.freeiconspng.com/img/6266   -->
+                    <img src="Logo.png"
+                         alt="https://www.freeiconspng.com/img/6266"
+                         width="150" height="120">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <th id="time"></th>
+            <th></th>
+        </tr>
+    </table>
+</div>
+
+<div id="sidebar">
+    <ul style="list-style-type: none;">
+        <li><a href="Q8_Homepage.html">Home page</a></li>
+        <li><a href="Q8_AvailablePets.html">Available Pets</a></li>
+        <li><a href="Q8_FindPet.html">Find a pet</a></li>
+        <li><a href="Q8_DogCare.html">Dog care</a></li>
+        <li><a href="Q8_CatCare.html">Cat care</a></li>
+        <li><a href="Q8_DonatePet.html">Donate pet</a></li>
+        <li><a href="Q8_ContactUs.html">Contact Us</a></li>
+    </ul>
+</div>
+
+<div id="content">
+    <form name="form" onsubmit="return checkForm()">
+        <h1 id="Content_title">Find a dog/cat</h1>
+        <p>
+            <fieldset>
+                <legend>Dog/Cat Finder</legend>
+                <p>
+                    Cat or Dog:
+                    <label><input type="radio" name="PetChoice" id="Cat"/>Cat</label>
+                    <label><input type="radio" name="PetChoice" id="Dog"/>Dog</label>
+                </p>
+                <p>
+                    What type of dog/cat?
+                    <select name="PetType" id="PetType">
+                        <option>Labrador Retriever</option>
+                        <option>German Shepherd</option>
+                        <option>Golden Retriever</option>
+                        <option>Bulldog</option>
+                        <option>Poodle</option>
+                        <option>Siamese</option>
+                        <option>Maine Coon</option>
+                        <option>Persian</option>
+                        <option>Bengal</option>
+                        <option>Scottish Fold</option>
+                        <option>doesn't matter</option>
+                    </select>
+                </p>
+                <p>
+                    Preferred age of animal:
+                    <select name="age" id="age">
+                        <option>Under 1 year old</option>
+                        <option>1 to 3 year old</option>
+                        <option>3 to 6 year old</option>
+                        <option>6 to 9 year old</option>
+                        <option>older than 9 year old</option>
+                        <option>doesn't matter</option>
+                    </select>
+                </p>
+
+                <p>
+                    Whether it needs to get along with other dogs, cats or small children(Pick as many as apply)
+                    <label> <input type="checkbox" name="getalong[]" id="Dogs"/> Dogs</label>
+                    <label> <input type="checkbox" name="getalong[]" id="Cats"/> Cats</label>
+                    <label> <input type="checkbox" name="getalong[]" id="Children"/> Children</label>
+                </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="Submit"/>
+                <input type="reset" value="Reset" onclick="resetBreed()"/>
+            </p>
+    </form>
+</div>
+
+<div id="footer">
+    <p><a href="Q8_Disclamer.html">Privacy/Disclaimer Statement</a></p>
+</div>
+
+</body>
+</html>

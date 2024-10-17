@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Q8</title>
+        <link rel="stylesheet" href="Q8_ExternalStyleSheet.css">
+        <style>
+            .linkscat{
+            color: orange;
+            font-size: 20px;
+        }
+        .linkscat:hover:not(.active){
+            color:white;
+            background-color: transparent;
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+            setInterval(currentTime, 1000);
+            function currentTime() {
+                const t = new Date();
+                document.getElementById("time").innerHTML = t.toLocaleString();
+            }
+        </script>
+        <div id = "header">
+            <table>
+                <tr>
+                <td><h1>Pet Care Center</h1></td>
+                            <!-- This image has been taken from: https://www.freeiconspng.com/img/6266   -->
+                <td><a href="Q8_Homepage.html"> 
+                    <img src="Logo.png" 
+                    alt="https://www.freeiconspng.com/img/6266" 
+                    width="150" height="120">
+                    </a>
+             </td>
+             </tr>
+             <tr>
+				<th id="time"></th>
+				<th></th>
+			</tr>
+            </table>
+        </div>
+
+        <div id = "sidebar">
+            <ul style = "list-style-type: none;">
+                <li><a href="Q8_Homepage.html">Home page</a></li>
+                <li><a href="Q8_AvailablePets.html">Available Pets</a></li>
+                <li><a href="Q8_FindPet.html">Find a pet</a></li>
+                <li><a href="Q8_DogCare.html">Dog care</a></li>
+                <li><a href="Q8_CatCare.html">Cat care</a></li>
+                <li><a href="Q8_DonatePet.html">Donate pet</a></li>
+                <li><a href="Q8_ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div id = "content">
+            <h1 id="Content_title">Cat Care</h1>
+            <table>
+                <tr>
+                    <td>Here are some link for you in order to take care of your cat:</td>
+                    <th><a class = "linkscat" href="https://www.aspca.org/pet-care/cat-care/general-cat-care">ASPCA</a> </th>
+                    <th><a class = "linkscat" href="https://www.purina.com/articles/cat/health/routine-care/how-to-care-for-a-cat">PURINA</a></th>
+                </tr>
+            </table>
+        </div>
+
+        <div id = "footer">
+            <p><a href = "Q8_Disclamer.html">Privacy/Disclaimer Statement</a></p>
+        </div>
+
+    </body>
+</html>

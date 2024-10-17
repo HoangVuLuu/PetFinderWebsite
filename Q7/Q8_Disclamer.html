@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <link rel="stylesheet" href="Q8_ExternalStyleSheet.css">
+        <title>Q8</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            setInterval(currentTime, 1000);
+            function currentTime() {
+                const t = new Date();
+                document.getElementById("time").innerHTML = t.toLocaleString();
+            }
+        </script>
+        <div id = "header">
+            <table>
+                <tr>
+                <td><h1>Pet Care Center</h1></td>
+                <td><a href="Q8_Homepage.html"> 
+                                <!-- This image has been taken from: https://www.freeiconspng.com/img/6266   -->
+                    <img src="Logo.png" 
+                    alt="https://www.freeiconspng.com/img/6266" 
+                    width="150" height="120">
+                    </a>
+             </td>
+             </tr>
+             <tr>
+				<th id="time"></th>
+				<th></th>
+			</tr>
+            </table>
+        </div>
+
+        <div id = "sidebar">
+            <ul style = "list-style-type: none;">
+                <li><a href="Q8_Homepage.html">Home page</a></li>
+                <li><a href="Q8_AvailablePets.html">Available Pets</a></li>
+                <li><a href="Q8_FindPet.html">Find a pet</a></li>
+                <li><a href="Q8_DogCare.html">Dog care</a></li>
+                <li><a href="Q8_CatCare.html">Cat care</a></li>
+                <li><a href="Q8_DonatePet.html">Donate pet</a></li>
+                <li><a href="Q8_ContactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div id = "content">
+            <h1 id="Content_title">Privacy/Disclamer Statement</h1>
+            <p>
+				At Pet Care Center, we are committed to protecting your privacy and ensuring the security of your personal information. We promise to never sell or misuse your information in any way.
+
+Please note that the content provided on this website is for informational purposes only. While we make every effort to ensure the accuracy and reliability of the information presented, we cannot guarantee that all information is entirely error-free.
+
+Any reliance you place on the information provided on this website is strictly at your own risk. We shall not be held liable for any loss or damage arising from the use of this website or any information contained herein.
+
+Thank you for visiting Pet Care Center. If you have any concerns or questions regarding our Privacy/Disclaimer Statement, please don't hesitate to contact us.
+			</p>
+        </div>
+
+        <div id = "footer">
+            <p><a href = "Q8_Disclamer.html">Privacy/Disclaimer Statement</a></p>
+        </div>
+
+    </body>
+</html>
